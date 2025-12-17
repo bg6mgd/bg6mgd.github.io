@@ -1,0 +1,4 @@
+/* 隐藏左侧导航栏顶部的 site_name */
+.md-nav--primary > .md-nav__title {
+  display: none;
+}

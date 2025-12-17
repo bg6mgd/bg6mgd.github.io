@@ -6,19 +6,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="技术与笔记">
       
       
-        <meta name="author" content="lego">
       
       
-        <link rel="canonical" href="https://bg6mgd.github.io/docs/%E6%96%87%E6%A1%A3%E5%88%97%E8%A1%A8/mkdocs/">
-      
-      
-        <link rel="prev" href="../gitserver/">
-      
-      
-        <link rel="next" href="../website/">
+        <link rel="next" href="../gitserver/">
       
       
         
@@ -29,14 +21,11 @@
     
     
       
-        <title>用mkdocs搭建github个人博客 - 我的博客</title>
+        <title>mkdocs实现技术博客 - 我的日常记录</title>
       
     
     
       <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
-      
-        
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
       
 
@@ -55,6 +44,8 @@
       
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -64,14 +55,7 @@
   </head>
   
   
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+    <body dir="ltr">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -92,9 +76,11 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href="../.." title="我的博客" class="md-header__button md-logo" aria-label="我的博客" data-md-component="logo">
+    <a href="../.." title="我的日常记录" class="md-header__button md-logo" aria-label="我的日常记录" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,30 +94,18 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            我的博客
+            我的日常记录
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              用mkdocs搭建github个人博客
+              mkdocs实现技术博客
             
           </span>
         </div>
       </div>
     </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
-    
-  
-</form>
-      
     
     
       <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
@@ -188,56 +162,6 @@
       
         
           
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../.." class="md-tabs__link">
-        
-  
-  
-    
-  
-  日常记录
-
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-    
-  
-  
-    
-    
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../gitserver/" class="md-tabs__link">
-          
-  
-  
-  文档列表
-
-        </a>
-      </li>
-    
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -251,18 +175,16 @@
                     
 
 
-  
 
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="导航栏" data-md-level="0">
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="我的博客" class="md-nav__button md-logo" aria-label="我的博客" data-md-component="logo">
+    <a href="../.." title="我的日常记录" class="md-nav__button md-logo" aria-label="我的日常记录" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
 
     </a>
-    我的博客
+    我的日常记录
   </label>
   
   <ul class="md-nav__list" data-md-scrollfix>
@@ -271,33 +193,6 @@
       
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    日常记录
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-    
-      
-      
-  
-  
     
   
   
@@ -308,9 +203,6 @@
     
       
         
-        
-      
-      
         
       
     
@@ -319,17 +211,17 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="">
             
   
   
   <span class="md-ellipsis">
     
   
-    文档列表
+    技术笔记
   
 
     
@@ -340,44 +232,16 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_1">
             <span class="md-nav__icon md-icon"></span>
             
   
-    文档列表
+    技术笔记
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../gitserver/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    搭建git仓库服务器
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
             
               
                 
@@ -402,7 +266,7 @@
   <span class="md-ellipsis">
     
   
-    用mkdocs搭建github个人博客
+    mkdocs实现技术博客
   
 
     
@@ -420,7 +284,7 @@
   <span class="md-ellipsis">
     
   
-    用mkdocs搭建github个人博客
+    mkdocs实现技术博客
   
 
     
@@ -500,10 +364,49 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7sitename" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.实现在左边栏隐藏sitename
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gitserver/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    搭建git私有仓库
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -523,7 +426,7 @@
   <span class="md-ellipsis">
     
   
-    网站模板修改
+    搭建网站
   
 
     
@@ -625,6 +528,17 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#7sitename" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.实现在左边栏隐藏sitename
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -642,22 +556,23 @@
 
 
 
-<h1 id="mkdocsgithub">用mkdocs搭建github个人博客<a class="headerlink" href="#mkdocsgithub" title="Permanent link">&para;</a></h1>
-<h2 id="1mkdocs">1.安装mkdocs<a class="headerlink" href="#1mkdocs" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>pip install mkdocs 安装工具
+<h1 id="mkdocsgithub">用mkdocs搭建github个人博客</h1>
+<h2 id="1mkdocs">1.安装mkdocs</h2>
+<pre><code class="language-md">pip install mkdocs 安装工具
 pip install mkdocs mkdocs-material
 pip install mkdocs-awesome-pages-plugin
-</code></pre></div>
-<h2 id="2">2.新建项目<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>mkdocs new 博客名字
+
+</code></pre>
+<h2 id="2">2.新建项目</h2>
+<pre><code>mkdocs new 博客名字
 cd 博客名字
 git init
 git add .
 git commit -m &quot;update&quot;
 ## 3.用ssh公钥绑定github 搜索方法，这里不再赘述。
-</code></pre></div>
-<h2 id="4">4.仓库绑定<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>git remote add origin https://github.com/bg6mgd/docs.git
+</code></pre>
+<h2 id="4">4.仓库绑定</h2>
+<pre><code>git remote add origin https://github.com/bg6mgd/docs.git
 上面不行了，用下面这个
 git remote set-url origin git@github.com:bg6mgd/docs.git
 git branch -M main
@@ -666,10 +581,10 @@ git branch -M main
 典型输出：
 origin  git@github.com:user/repo.git (fetch) 
 origin  git@github.com:user/repo.git (push)
-</code></pre></div>
-<h2 id="5">5.编辑内容<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
-<p>在文件夹中找到mkdocs.yml配置文件，编辑配置内容
-<div class="highlight"><pre><span></span><code>site_name: 我的博客
+</code></pre>
+<h2 id="5">5.编辑内容</h2>
+<p>在文件夹中找到mkdocs.yml配置文件，编辑配置内容</p>
+<pre><code>site_name: 我的博客
 site_url: https://bg6mgd.github.io/docs/
 site_description: 技术与笔记
 site_author: lego
@@ -708,16 +623,40 @@ markdown_extensions:
 plugins:
   - search
 在docs文件中，创建md文件，写入内容，并在mkdocs.yml中设置关联。
-</code></pre></div></p>
-<h2 id="6">6.发布<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code>mkdocs gh-deploy
+</code></pre>
+<h2 id="6">6.发布</h2>
+<pre><code>mkdocs gh-deploy
 
 当网站有残余
 
 mkdocs build --clean  清除残余
 发布
 mkdocs gh-deploy
-</code></pre></div>
+</code></pre>
+<h2 id="7sitename">7.实现在左边栏隐藏sitename</h2>
+<pre><code>site_name: 我的日常记录
+theme:
+  name: material
+  language: zh
+  features:
+    - navigation.sections    # 左侧分组
+    - navigation.expand      # 左侧默认展开
+nav:
+  #- 首页: index.md
+  - 技术笔记:
+    - mkdocs实现技术博客: files/mkdocs.md  
+    - 搭建git私有仓库: files/gitserver.md
+    - 搭建网站: files/website.md
+
+
+
+plugins:
+  - search
+  ##- awesome-pages          # 自动生成左侧文章列表
+
+extra_css:
+  - stylesheets/extra.css
+</code></pre>
 
 
 
@@ -770,7 +709,7 @@ mkdocs gh-deploy
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
